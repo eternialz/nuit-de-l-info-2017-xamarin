@@ -14,6 +14,7 @@ EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		NuitInfoApp\NuitInfoApp\NuitInfoApp.projitems*{25f927e1-b108-477b-adc3-1d64e73c6dc2}*SharedItemsImports = 4
+		NuitInfoApp\NuitInfoApp\NuitInfoApp.projitems*{90a1d1dc-ecd7-4964-b9f9-8d0ce3fb6dff}*SharedItemsImports = 4
 		NuitInfoApp\NuitInfoApp\NuitInfoApp.projitems*{d12428d2-54cf-4457-9528-19634f6259dc}*SharedItemsImports = 4
 		NuitInfoApp\NuitInfoApp\NuitInfoApp.projitems*{db352638-60ad-4617-90fc-7268be74ae89}*SharedItemsImports = 13
 	EndGlobalSection

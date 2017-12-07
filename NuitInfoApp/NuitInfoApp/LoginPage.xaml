@@ -4,15 +4,28 @@
              x:Class="NuitInfoApp.LoginPage">
     <ContentPage.Content>
             <StackLayout>
+            <StackLayout.DataBinding>
+                
+            </StackLayout.DataBinding>
             
+            <Label Text="Username"
+                HorizontalOptions="Start"
+                Margin="20, 20, 0, 0"/>
+
             <Entry
-                Text="{Binding ID}"
-                HorizontalOptions="Center"/>
-            
+                Text="{Binding Username, Mode=TwoWay}"
+                HorizontalOptions="Center"
+                WidthRequest="300"/>
+
+            <Label Text="Password"
+                HorizontalOptions="Start"
+                Margin="20, 20, 0, 0"/>
+
             <Entry
-                Text="{Binding Password}"
+                Text="{Binding Password, Mode=TwoWay}"
                 IsPassword="True"
-                HorizontalOptions="Center"/>
+                HorizontalOptions="Center"
+                WidthRequest="300"/>
 
             <Button
                 Text="Log In"

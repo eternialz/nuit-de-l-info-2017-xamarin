@@ -13,7 +13,7 @@ namespace NuitInfoApp
 		{
 			InitializeComponent();
 
-			MainPage = new NuitInfoApp.MainPage();
+			MainPage = new NavigationPage(new MainPage());
 		}
 
 		protected override void OnStart ()

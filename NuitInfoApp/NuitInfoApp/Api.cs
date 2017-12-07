@@ -8,6 +8,7 @@ using Xamarin.Forms;
 
 public class Api
 {
+<<<<<<< Updated upstream
     private string RestUrl;
     private HttpClient Client;
 
@@ -15,6 +16,12 @@ public class Api
     {
         Client = new HttpClient();
         Client.MaxResponseContentBufferSize = 256000;
+=======
+    /*private string RestUrl;
+
+    public Api(string Url)
+    {
+>>>>>>> Stashed changes
         RestUrl = Url;
     }
 
@@ -27,6 +34,7 @@ public class Api
             var Content = await Response.Content.ReadAsStringAsync();
             return Content;
         } else {
+<<<<<<< Updated upstream
             return Response.StatusCode;
         }
     }
@@ -45,4 +53,9 @@ public class Api
 
         return Response.StatusCode;
     }
+=======
+            return new string('{"status": "error"}');
+        }
+    }*/
+>>>>>>> Stashed changes
 }

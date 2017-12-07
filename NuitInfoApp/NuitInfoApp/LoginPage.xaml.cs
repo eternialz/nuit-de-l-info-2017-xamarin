@@ -15,11 +15,12 @@ namespace NuitInfoApp
 		public LoginPage ()
 		{
 			InitializeComponent ();
+            BindingContext = new UserModel();
 		}
 
         private void LoginButtonClicked(object sender, EventArgs e)
         {
-
+            
         }
 	}
 }
