@@ -19,7 +19,7 @@ namespace NuitInfoApp.UWP
     {
         public MainPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
 
             LoadApplication(new NuitInfoApp.App());
         }

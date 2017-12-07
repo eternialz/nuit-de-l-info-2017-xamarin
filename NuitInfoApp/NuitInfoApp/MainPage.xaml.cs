@@ -13,5 +13,10 @@ namespace NuitInfoApp
 		{
 			InitializeComponent();
 		}
+
+        private async void LoginButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LoginPage());
+        }
 	}
 }
