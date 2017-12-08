@@ -9,5 +9,7 @@ namespace NuitInfoApp
         public double latitude { get; set; }
         public double longitude { get; set; }
         public string report_name { get; set; }
+
+        public string token { get { return AppSettings.Token; } }
     }
 }

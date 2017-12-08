@@ -25,7 +25,7 @@ namespace NuitInfoApp
 
         public async Task<string> Request(string Uri)
         {
-            var RestUri = new Uri(string.Format(RestUrl + Uri, string.Empty));
+            var RestUri = new Uri(string.Format(RestUrl + Uri +"&token=\"" + AppSettings.Token + "\"", string.Empty));
             var Response = await Client.GetAsync(RestUri);
 
             if (Response.IsSuccessStatusCode)
@@ -45,9 +45,8 @@ namespace NuitInfoApp
 
             StringContent Content = new StringContent(Json, Encoding.UTF8, "application/json");
 
-            HttpResponseMessage Response = null;
-            Response = await Client.PostAsync(RestUri.AbsoluteUri, Content);
-            return Response.StatusCode.ToString();
+            var Response = await Client.PostAsync(RestUri.AbsoluteUri, Content);
+            return await Response.Content.ReadAsStringAsync();
         }
     }
 }

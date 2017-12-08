@@ -5,12 +5,12 @@
     <ContentPage.Content>
             <StackLayout>
             
-            <Label Text="Username"
+            <Label Text="Email"
                 HorizontalOptions="Start"
                 Margin="20, 20, 0, 0"/>
 
             <Entry
-                Text="{Binding Username, Mode=TwoWay}"
+                Text="{Binding email, Mode=TwoWay}"
                 HorizontalOptions="Center"
                 WidthRequest="300"/>
 
@@ -19,7 +19,7 @@
                 Margin="20, 20, 0, 0"/>
 
             <Entry
-                Text="{Binding Password, Mode=TwoWay}"
+                Text="{Binding password, Mode=TwoWay}"
                 IsPassword="True"
                 HorizontalOptions="Center"
                 WidthRequest="300"/>

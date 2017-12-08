@@ -1,7 +1,9 @@
 ﻿{
   "dependencies": {
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
+    "Newtonsoft.Json": "10.0.3",
     "TK.CustomMap": "1.6.1",
+    "Xam.Plugins.Settings": "3.1.1",
     "Xamarin.Forms": "2.4.0.280"
   },
   "frameworks": {

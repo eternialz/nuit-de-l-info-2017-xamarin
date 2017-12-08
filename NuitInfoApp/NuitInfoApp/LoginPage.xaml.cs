@@ -23,7 +23,16 @@ namespace NuitInfoApp
         {
             UserModel user = (UserModel)(sender as Button).BindingContext;
             Api RestApi = new Api("https://cordonbleu.erfani.fr/");
-            await RestApi.Post(JsonConvert.SerializeObject(user).ToString(), "users/auth");
+            var json = JsonConvert.SerializeObject(user);
+            var result = await RestApi.Post(JsonConvert.SerializeObject(user).ToString(), "users/auth");
+            dynamic DynamicJson = JsonConvert.DeserializeObject(result);
+
+            AppSettings.Token = DynamicJson.token;
+
+            await Navigation.PushAsync(new MapPage());
+
+
+            
         }
 
         private async void RegisterPageOpen(object sender, EventArgs e)

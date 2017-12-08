@@ -68,7 +68,7 @@ namespace NuitInfoApp
 
         public String Token
         {
-            get { return _token; }
+            get { return AppSettings.Token; }
             set
             {
                 if (_token != value)

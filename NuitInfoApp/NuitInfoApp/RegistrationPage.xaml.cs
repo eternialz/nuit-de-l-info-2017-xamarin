@@ -29,7 +29,7 @@ namespace NuitInfoApp
                 Api RestApi = new Api("https://cordonbleu.erfani.fr/");
                 var json = JsonConvert.SerializeObject(user);
                 string code = await RestApi.Post(json, "users/register");
-                await DisplayAlert("lol", json + code, "ok");
+                await Navigation.PushAsync(new MapPage());
             }
         }
             
