@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using TK.CustomMap.iOSUnified;
 using UIKit;
+using Xamarin;
+using Xamarin.Forms;
 
 namespace NuitInfoApp.iOS
 {
@@ -25,7 +28,13 @@ namespace NuitInfoApp.iOS
 			global::Xamarin.Forms.Forms.Init ();
 			LoadApplication (new NuitInfoApp.App ());
 
-			return base.FinishedLaunching (app, options);
-		}
-	}
+            Forms.Init();
+            FormsMaps.Init();
+            TKCustomMapRenderer.InitMapRenderer();
+            NativePlacesApi.Init();
+
+            LoadApplication(new App());
+            return base.FinishedLaunching(app, options);
+        }
+    }
 }
