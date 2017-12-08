@@ -4,6 +4,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using System.Net.Http.Headers;
 
 public class Api
 {
@@ -15,6 +16,7 @@ public class Api
         Client = new HttpClient();
         Client.MaxResponseContentBufferSize = 256000;
         RestUrl = Url;
+        Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
     }
 
     public async Task<object> Request(string Uri)
@@ -42,7 +44,7 @@ public class Api
         HttpResponseMessage Response = null;
         if (IsNewItem)
         {
-            Response = await Client.PostAsync(RestUri, Content);
+            //Response = await Client.PostAsync(RestUri.AbsolutePath, Content);
         }
 
         return Response.StatusCode;

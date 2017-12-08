@@ -51,7 +51,21 @@ namespace NuitInfoApp
             }
         }
 
+        private String _confirmPassword;
+        public String ConfirmPassword
+        {
+            get { return _confirmPassword; }
+            set
+            {
+                if (_confirmPassword != value)
+                {
+                    _confirmPassword = value;
+                    OnPropertyChanged("ConfirmPassword");
+                }
+            }
+        }
         private String _token;
+
         public String Token
         {
             get { return _token; }

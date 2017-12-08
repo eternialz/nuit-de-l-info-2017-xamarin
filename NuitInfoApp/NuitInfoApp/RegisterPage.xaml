@@ -1,16 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="NuitInfoApp.LoginPage">
+             x:Class="NuitInfoApp.RegisterPage">
     <ContentPage.Content>
-            <StackLayout>
-            
+        <StackLayout>
+            <Label Text="Registration" 
+                HorizontalOptions="Center" />
+
             <Label Text="Username"
                 HorizontalOptions="Start"
                 Margin="20, 20, 0, 0"/>
 
             <Entry
                 Text="{Binding Username, Mode=TwoWay}"
+                HorizontalOptions="Center"
+                WidthRequest="300"/>
+
+            <Label Text="Email"
+                HorizontalOptions="Start"
+                Margin="20, 20, 0, 0"/>
+
+            <Entry
+                Text="{Binding Email, Mode=TwoWay}"
                 HorizontalOptions="Center"
                 WidthRequest="300"/>
 
@@ -24,15 +35,20 @@
                 HorizontalOptions="Center"
                 WidthRequest="300"/>
 
-            <Button
-                Text="Log In"
-                HorizontalOptions="Center"
-                Clicked="LoginButtonClicked"/>
+            <Label Text="Confirm Password"
+                HorizontalOptions="Start"
+                Margin="20, 20, 0, 0"/>
 
-            <Button 
+            <Entry
+                Text="{Binding ConfirmPassword, Mode=TwoWay}"
+                IsPassword="True"
+                HorizontalOptions="Center"
+                WidthRequest="300"/>
+
+            <Button
                 Text="Register"
                 HorizontalOptions="Center"
-                Clicked="RegisterPageOpen"/>
+                Clicked="RegisterButtonClicked"/>
 
         </StackLayout>
     </ContentPage.Content>
