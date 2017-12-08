@@ -18,6 +18,10 @@
                 HorizontalOptions="Center"
                 Clicked="LoginButtonClicked"/>
 
+            <Button
+                Text="Map"
+                HorizontalOptions="Center"
+                Clicked="MapButtonClicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

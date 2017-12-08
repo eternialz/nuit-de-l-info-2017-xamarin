@@ -18,5 +18,9 @@ namespace NuitInfoApp
         {
             await Navigation.PushAsync(new LoginPage());
         }
+        private async void MapButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MapPage());
+        }
 	}
 }

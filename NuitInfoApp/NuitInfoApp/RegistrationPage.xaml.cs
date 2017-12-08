@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,12 +19,17 @@ namespace NuitInfoApp
             BindingContext = new UserModel();
 		}
 
-        private void RegisterButtonClicked(object sender, EventArgs e)
+        private async void RegisterButtonClicked(object sender, EventArgs e)
         {
             UserModel user = (UserModel)(sender as Button).BindingContext;
-            if (user.Password != user.ConfirmPassword)
+            if (user.password != user.ConfirmPassword)
             {
-                DisplayAlert("Error", "Passwords don't match", "Ok");
+                await DisplayAlert("Error", "Passwords don't match", "Ok");
+            } else {
+                Api RestApi = new Api("https://cordonbleu.erfani.fr/");
+                var json = JsonConvert.SerializeObject(user);
+                string code = await RestApi.Post(json, "users/register");
+                await DisplayAlert("lol", json + code, "ok");
             }
         }
             

@@ -20,14 +20,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)MapPage.xaml.cs">
-      <DependentUpon>MapPage.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MapPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RegistrationPage.xaml.cs">
       <DependentUpon>RegistrationPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Report.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ReportPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UserModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -47,16 +46,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="$(MSBuildThisFileDirectory)MapPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)RegistrationPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MapPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

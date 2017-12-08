@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.NuitInfoApp">
 	<uses-sdk android:minSdkVersion="15" />
-	<application android:label="NuitInfoApp.Android"></application>
-  <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyDGWNtMnG9ovePMWTRTr6RBtrE8t8obfc8" />
-  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<application android:label="NuitInfoApp.Android">
+    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value=" AIzaSyCH_QERAfhdemQ7htYTNrdZ93O16YJFsm8" />
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+  </application>
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
   <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+  <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 </manifest>

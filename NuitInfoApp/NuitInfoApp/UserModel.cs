@@ -10,7 +10,7 @@ namespace NuitInfoApp
     {
         private String _username;
 
-        public String Username
+        public String name
         {
             get { return _username; }
             set
@@ -18,13 +18,13 @@ namespace NuitInfoApp
                 if (_username != value)
                 {
                     _username = value;
-                    OnPropertyChanged("Username");
+                    OnPropertyChanged("name");
                 }
             }
         }
 
         private String _email;
-        public String Email
+        public String email
         {
             get { return _email; }
             set
@@ -32,13 +32,13 @@ namespace NuitInfoApp
                 if (_email != value)
                 {
                     _email = value;
-                    OnPropertyChanged("Email");
+                    OnPropertyChanged("email");
                 }
             }
         }
 
         private String _password;
-        public String Password
+        public String password
         {
             get { return _password; }
             set
@@ -46,7 +46,7 @@ namespace NuitInfoApp
                 if (_password != value)
                 {
                     _password = value;
-                    OnPropertyChanged("Password");
+                    OnPropertyChanged("password");
                 }
             }
         }

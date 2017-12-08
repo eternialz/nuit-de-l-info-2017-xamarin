@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.Net.Http.Headers;
+using System.Diagnostics;
 
 namespace NuitInfoApp
 {
@@ -22,7 +23,7 @@ namespace NuitInfoApp
             Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-        public async Task<object> Request(string Uri)
+        public async Task<string> Request(string Uri)
         {
             var RestUri = new Uri(string.Format(RestUrl + Uri, string.Empty));
             var Response = await Client.GetAsync(RestUri);
@@ -34,22 +35,19 @@ namespace NuitInfoApp
             }
             else
             {
-                return Response.StatusCode;
+                return Response.StatusCode.ToString();
             }
         }
 
-        public async Task<object> Post(string Json, string Uri, bool IsNewItem)
+        public async Task<string> Post(string Json, string Uri)
         {
             Uri RestUri = new Uri(string.Format(RestUrl + Uri, string.Empty));
 
             StringContent Content = new StringContent(Json, Encoding.UTF8, "application/json");
 
             HttpResponseMessage Response = null;
-            if (IsNewItem)
-            {
-                Response = await Client.PostAsync(RestUri.AbsolutePath, Content);
-            }
-            return Response.StatusCode;
+            Response = await Client.PostAsync(RestUri.AbsoluteUri, Content);
+            return Response.StatusCode.ToString();
         }
     }
 }
