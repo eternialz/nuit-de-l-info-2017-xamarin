@@ -44,7 +44,7 @@ public class Api
         HttpResponseMessage Response = null;
         if (IsNewItem)
         {
-            //Response = await Client.PostAsync(RestUri.AbsolutePath, Content);
+            Response = await Client.PostAsync(RestUri.AbsolutePath, Content);
         }
 
         return Response.StatusCode;
