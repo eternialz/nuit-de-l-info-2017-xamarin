@@ -10,11 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace NuitInfoApp
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class RegisterPage : ContentPage
+	public partial class RegistrationPage : ContentPage
 	{
-		public RegisterPage ()
+		public RegistrationPage ()
 		{
-			InitializeComponent ();
+            InitializeComponent();
             BindingContext = new UserModel();
 		}
 
@@ -25,7 +25,7 @@ namespace NuitInfoApp
             {
                 DisplayAlert("Error", "Passwords don't match", "Ok");
             }
-            
         }
+            
 	}
 }

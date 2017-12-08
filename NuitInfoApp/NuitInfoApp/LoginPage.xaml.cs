@@ -25,7 +25,7 @@ namespace NuitInfoApp
 
         private async void RegisterPageOpen(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new RegisterPage());
+            await Navigation.PushAsync(new RegistrationPage());
         }
 	}
 }

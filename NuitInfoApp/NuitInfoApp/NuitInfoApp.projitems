@@ -24,8 +24,8 @@
       <DependentUpon>MapPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)RegisterPage.xaml.cs">
-      <DependentUpon>RegisterPage.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)RegistrationPage.xaml.cs">
+      <DependentUpon>RegistrationPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)UserModel.cs" />
@@ -47,7 +47,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)RegisterPage.xaml">
+    <Page Include="$(MSBuildThisFileDirectory)MapPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)RegistrationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
